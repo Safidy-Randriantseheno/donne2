@@ -1,0 +1,3 @@
+[2024-08-05T13:14:49.887+0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T13:14:49.935+0300] {taskinstance.py:2066} INFO - Dependencies not met for <TaskInstance: air_pollution_data_dag.fetch_air_pollution_data_Los_Angeles scheduled__2024-08-05T09:00:00+00:00 [success]>, dependency 'Task Instance State' FAILED: Task is in the 'success' state.
+[2024-08-05T13:14:49.945+0300] {local_task_job_runner.py:163} INFO - Task is not able to be run

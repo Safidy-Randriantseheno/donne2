@@ -1,0 +1,47 @@
+[2024-08-05T11:35:39.282+0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T11:35:39.315+0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: air_pollution_analysis.clean_data manual__2024-08-05T08:07:47+00:00 [queued]>
+[2024-08-05T11:35:39.324+0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: air_pollution_analysis.clean_data manual__2024-08-05T08:07:47+00:00 [queued]>
+[2024-08-05T11:35:39.324+0300] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-08-05T11:35:39.339+0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): clean_data> on 2024-08-05 08:07:47+00:00
+[2024-08-05T11:35:39.343+0300] {standard_task_runner.py:64} INFO - Started process 47636 to run task
+[2024-08-05T11:35:39.347+0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'air_pollution_analysis', 'clean_data', 'manual__2024-08-05T08:07:47+00:00', '--job-id', '233', '--raw', '--subdir', 'DAGS_FOLDER/air_pollution_data_dag.py', '--cfg-path', '/tmp/tmpvha1l3gp']
+[2024-08-05T11:35:39.348+0300] {standard_task_runner.py:91} INFO - Job 233: Subtask clean_data
+[2024-08-05T11:35:39.412+0300] {task_command.py:426} INFO - Running <TaskInstance: air_pollution_analysis.clean_data manual__2024-08-05T08:07:47+00:00 [running]> on host std21092
+[2024-08-05T11:35:39.489+0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='air_pollution_analysis' AIRFLOW_CTX_TASK_ID='clean_data' AIRFLOW_CTX_EXECUTION_DATE='2024-08-05T08:07:47+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-05T08:07:47+00:00'
+[2024-08-05T11:35:39.490+0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-05T11:35:39.506+0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-05T11:35:39.506+0300] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/safidy/.local/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'timestamp'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/safidy/airflow/dags/air_pollution_data_dag.py", line 39, in clean_data
+    df['timestamp'] = pd.to_datetime(df['timestamp'], unit='s')
+  File "/home/safidy/.local/lib/python3.9/site-packages/pandas/core/frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/safidy/.local/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'timestamp'
+[2024-08-05T11:35:39.519+0300] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=air_pollution_analysis, task_id=clean_data, run_id=manual__2024-08-05T08:07:47+00:00, execution_date=20240805T080747, start_date=20240805T083539, end_date=20240805T083539
+[2024-08-05T11:35:39.532+0300] {standard_task_runner.py:110} ERROR - Failed to execute job 233 for task clean_data ('timestamp'; 47636)
+[2024-08-05T11:35:39.564+0300] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-08-05T11:35:39.592+0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-05T11:35:39.598+0300] {local_task_job_runner.py:222} INFO - ::endgroup::

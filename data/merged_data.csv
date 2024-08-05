@@ -1,0 +1,7 @@
+city,timestamp,PM2.5,PM10,O3,NO2,SO2,CO,Location_x,Population,Density (people/km²),Urbanization (%),Average Income (USD),Education Level (% with Bachelor's or higher),Location_y,Altitude (m),Proximity to Industry (km)
+Los Angeles,1722838698,12.37,20.58,24.68,75.4,7.09,494.0,Los Angeles,10039107,3276,89,60000,32,Los Angeles,89,5.0
+Paris,1722838657,11.26,17.42,12.16,27.08,2.56,337.12,Paris,2140526,21383,98,45000,29,Paris,35,3.0
+Tokyo,1722838659,32.57,38.67,185.97,52.09,34.81,337.12,Tokyo,13929286,6169,100,55000,37,Tokyo,40,2.0
+Antananarivo,1722838661,52.08,74.41,53.64,5.31,3.1,1161.58,Antananarivo,1391433,3097,69,1000,10,Antananarivo,1276,0.5
+Nairobi,1722838666,195.15,283.09,87.26,35.3,5.66,3257.75,Nairobi,4397073,6000,61,1500,12,Nairobi,1795,1.0
+Lima,1722838670,14.14,28.2,29.68,26.39,14.07,447.27,Lima,9674755,3220,81,4500,15,Lima,1540,1.5

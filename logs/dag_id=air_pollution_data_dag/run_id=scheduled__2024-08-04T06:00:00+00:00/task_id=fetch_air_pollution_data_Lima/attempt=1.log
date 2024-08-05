@@ -1,0 +1,18 @@
+[2024-08-05T09:06:14.417+0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T09:06:14.455+0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: air_pollution_data_dag.fetch_air_pollution_data_Lima scheduled__2024-08-04T06:00:00+00:00 [queued]>
+[2024-08-05T09:06:14.470+0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: air_pollution_data_dag.fetch_air_pollution_data_Lima scheduled__2024-08-04T06:00:00+00:00 [queued]>
+[2024-08-05T09:06:14.471+0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-05T09:06:14.500+0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_air_pollution_data_Lima> on 2024-08-04 06:00:00+00:00
+[2024-08-05T09:06:14.508+0300] {standard_task_runner.py:64} INFO - Started process 14616 to run task
+[2024-08-05T09:06:14.518+0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'air_pollution_data_dag', 'fetch_air_pollution_data_Lima', 'scheduled__2024-08-04T06:00:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/air_pollution_data_dag.py', '--cfg-path', '/tmp/tmp9ctjl7_s']
+[2024-08-05T09:06:14.519+0300] {standard_task_runner.py:91} INFO - Job 51: Subtask fetch_air_pollution_data_Lima
+[2024-08-05T09:06:14.597+0300] {task_command.py:426} INFO - Running <TaskInstance: air_pollution_data_dag.fetch_air_pollution_data_Lima scheduled__2024-08-04T06:00:00+00:00 [running]> on host std21092
+[2024-08-05T09:06:14.786+0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='air_pollution_data_dag' AIRFLOW_CTX_TASK_ID='fetch_air_pollution_data_Lima' AIRFLOW_CTX_EXECUTION_DATE='2024-08-04T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-04T06:00:00+00:00'
+[2024-08-05T09:06:14.794+0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-05T09:06:19.936+0300] {logging_mixin.py:188} INFO - Erreur lors de la récupération des données pour Lima
+[2024-08-05T09:06:19.937+0300] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-05T09:06:19.937+0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-05T09:06:19.942+0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=air_pollution_data_dag, task_id=fetch_air_pollution_data_Lima, run_id=scheduled__2024-08-04T06:00:00+00:00, execution_date=20240804T060000, start_date=20240805T060614, end_date=20240805T060619
+[2024-08-05T09:06:19.983+0300] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-05T09:06:19.995+0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-05T09:06:19.996+0300] {local_task_job_runner.py:222} INFO - ::endgroup::

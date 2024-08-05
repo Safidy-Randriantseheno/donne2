@@ -1,0 +1,19 @@
+[2024-08-05T14:06:21.186+0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T14:06:21.211+0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: air_pollution_data_dag.fetch_air_pollution_data_Antananarivo scheduled__2024-08-05T10:00:00+00:00 [queued]>
+[2024-08-05T14:06:21.218+0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: air_pollution_data_dag.fetch_air_pollution_data_Antananarivo scheduled__2024-08-05T10:00:00+00:00 [queued]>
+[2024-08-05T14:06:21.218+0300] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-08-05T14:06:21.233+0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_air_pollution_data_Antananarivo> on 2024-08-05 10:00:00+00:00
+[2024-08-05T14:06:21.239+0300] {standard_task_runner.py:64} INFO - Started process 78804 to run task
+[2024-08-05T14:06:21.244+0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'air_pollution_data_dag', 'fetch_air_pollution_data_Antananarivo', 'scheduled__2024-08-05T10:00:00+00:00', '--job-id', '306', '--raw', '--subdir', 'DAGS_FOLDER/air_pollution_data_dag.py', '--cfg-path', '/tmp/tmph55nr4k3']
+[2024-08-05T14:06:21.245+0300] {standard_task_runner.py:91} INFO - Job 306: Subtask fetch_air_pollution_data_Antananarivo
+[2024-08-05T14:06:21.284+0300] {task_command.py:426} INFO - Running <TaskInstance: air_pollution_data_dag.fetch_air_pollution_data_Antananarivo scheduled__2024-08-05T10:00:00+00:00 [running]> on host std21092
+[2024-08-05T14:06:21.363+0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='air_pollution_data_dag' AIRFLOW_CTX_TASK_ID='fetch_air_pollution_data_Antananarivo' AIRFLOW_CTX_EXECUTION_DATE='2024-08-05T10:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-05T10:00:00+00:00'
+[2024-08-05T14:06:21.364+0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-05T14:06:25.272+0300] {logging_mixin.py:188} INFO - Données récupérées avec succès pour Antananarivo
+[2024-08-05T14:06:25.286+0300] {logging_mixin.py:188} INFO - Données stockées dans /home/safidy/airflow/data/air_pollution_data.csv
+[2024-08-05T14:06:25.288+0300] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-05T14:06:25.288+0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-05T14:06:25.304+0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=air_pollution_data_dag, task_id=fetch_air_pollution_data_Antananarivo, run_id=scheduled__2024-08-05T10:00:00+00:00, execution_date=20240805T100000, start_date=20240805T110621, end_date=20240805T110625
+[2024-08-05T14:06:25.355+0300] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-05T14:06:25.407+0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-05T14:06:25.409+0300] {local_task_job_runner.py:222} INFO - ::endgroup::

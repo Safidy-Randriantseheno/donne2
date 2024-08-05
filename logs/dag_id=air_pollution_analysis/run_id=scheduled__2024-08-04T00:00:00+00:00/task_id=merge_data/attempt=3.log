@@ -1,0 +1,33 @@
+[2024-08-05T10:01:01.294+0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T10:01:01.328+0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: air_pollution_analysis.merge_data scheduled__2024-08-04T00:00:00+00:00 [queued]>
+[2024-08-05T10:01:01.338+0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: air_pollution_analysis.merge_data scheduled__2024-08-04T00:00:00+00:00 [queued]>
+[2024-08-05T10:01:01.338+0300] {taskinstance.py:2306} INFO - Starting attempt 3 of 4
+[2024-08-05T10:01:01.355+0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): merge_data> on 2024-08-04 00:00:00+00:00
+[2024-08-05T10:01:01.360+0300] {standard_task_runner.py:64} INFO - Started process 31026 to run task
+[2024-08-05T10:01:01.364+0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'air_pollution_analysis', 'merge_data', 'scheduled__2024-08-04T00:00:00+00:00', '--job-id', '211', '--raw', '--subdir', 'DAGS_FOLDER/air_pollution_analysis_dag.py', '--cfg-path', '/tmp/tmp0b8s4mt4']
+[2024-08-05T10:01:01.365+0300] {standard_task_runner.py:91} INFO - Job 211: Subtask merge_data
+[2024-08-05T10:01:01.410+0300] {task_command.py:426} INFO - Running <TaskInstance: air_pollution_analysis.merge_data scheduled__2024-08-04T00:00:00+00:00 [running]> on host std21092
+[2024-08-05T10:01:01.485+0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='air_pollution_analysis' AIRFLOW_CTX_TASK_ID='merge_data' AIRFLOW_CTX_EXECUTION_DATE='2024-08-04T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-04T00:00:00+00:00'
+[2024-08-05T10:01:01.487+0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-05T10:01:01.490+0300] {logging_mixin.py:188} INFO - Erreur lors de la fusion des données : [Errno 2] No such file or directory: '/path/to/your/data/cleaned_data.csv'
+[2024-08-05T10:01:01.490+0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-05T10:01:01.490+0300] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/safidy/airflow/dags/air_pollution_analysis_dag.py", line 64, in merge_data
+    merged_df = pd.merge(air_pollution_df, demographic_df, left_on='city', right_on='Location')
+UnboundLocalError: local variable 'air_pollution_df' referenced before assignment
+[2024-08-05T10:01:01.496+0300] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=air_pollution_analysis, task_id=merge_data, run_id=scheduled__2024-08-04T00:00:00+00:00, execution_date=20240804T000000, start_date=20240805T070101, end_date=20240805T070101
+[2024-08-05T10:01:01.512+0300] {standard_task_runner.py:110} ERROR - Failed to execute job 211 for task merge_data (local variable 'air_pollution_df' referenced before assignment; 31026)
+[2024-08-05T10:01:01.535+0300] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-08-05T10:01:01.559+0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-05T10:01:01.560+0300] {local_task_job_runner.py:222} INFO - ::endgroup::
