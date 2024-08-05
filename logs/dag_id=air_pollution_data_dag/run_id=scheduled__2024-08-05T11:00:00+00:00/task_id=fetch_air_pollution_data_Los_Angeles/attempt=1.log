@@ -1,0 +1,89 @@
+[2024-08-05T15:00:05.262+0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T15:00:05.295+0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: air_pollution_data_dag.fetch_air_pollution_data_Los_Angeles scheduled__2024-08-05T11:00:00+00:00 [queued]>
+[2024-08-05T15:00:05.302+0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: air_pollution_data_dag.fetch_air_pollution_data_Los_Angeles scheduled__2024-08-05T11:00:00+00:00 [queued]>
+[2024-08-05T15:00:05.302+0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-08-05T15:00:05.316+0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_air_pollution_data_Los_Angeles> on 2024-08-05 11:00:00+00:00
+[2024-08-05T15:00:05.320+0300] {standard_task_runner.py:64} INFO - Started process 98507 to run task
+[2024-08-05T15:00:05.323+0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'air_pollution_data_dag', 'fetch_air_pollution_data_Los_Angeles', 'scheduled__2024-08-05T11:00:00+00:00', '--job-id', '313', '--raw', '--subdir', 'DAGS_FOLDER/air_pollution_data_dag.py', '--cfg-path', '/tmp/tmpl8piffvn']
+[2024-08-05T15:00:05.323+0300] {standard_task_runner.py:91} INFO - Job 313: Subtask fetch_air_pollution_data_Los_Angeles
+[2024-08-05T15:00:05.359+0300] {task_command.py:426} INFO - Running <TaskInstance: air_pollution_data_dag.fetch_air_pollution_data_Los_Angeles scheduled__2024-08-05T11:00:00+00:00 [running]> on host std21092
+[2024-08-05T15:00:05.429+0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='air_pollution_data_dag' AIRFLOW_CTX_TASK_ID='fetch_air_pollution_data_Los_Angeles' AIRFLOW_CTX_EXECUTION_DATE='2024-08-05T11:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-05T11:00:00+00:00'
+[2024-08-05T15:00:05.430+0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-05T15:00:15.444+0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-05T15:00:15.445+0300] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/safidy/.local/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/safidy/.local/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/safidy/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/home/safidy/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/safidy/.local/lib/python3.9/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.9/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.9/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.9/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.9/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.9/http/client.py", line 950, in send
+    self.connect()
+  File "/home/safidy/.local/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/safidy/.local/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f4d37295ac0>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/safidy/.local/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/safidy/.local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/home/safidy/.local/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/air_pollution?lat=34.0522&lon=-118.2437&appid=4a35b382b8d0e669fc1f1de462ea1006 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4d37295ac0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/safidy/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/safidy/airflow/dags/air_pollution_data_dag.py", line 26, in fetch_air_pollution_data
+    response = requests.get(url)
+  File "/home/safidy/.local/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/safidy/.local/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/air_pollution?lat=34.0522&lon=-118.2437&appid=4a35b382b8d0e669fc1f1de462ea1006 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4d37295ac0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2024-08-05T15:00:15.474+0300] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=air_pollution_data_dag, task_id=fetch_air_pollution_data_Los_Angeles, run_id=scheduled__2024-08-05T11:00:00+00:00, execution_date=20240805T110000, start_date=20240805T120005, end_date=20240805T120015
+[2024-08-05T15:00:15.498+0300] {standard_task_runner.py:110} ERROR - Failed to execute job 313 for task fetch_air_pollution_data_Los_Angeles (HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/air_pollution?lat=34.0522&lon=-118.2437&appid=4a35b382b8d0e669fc1f1de462ea1006 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4d37295ac0>: Failed to establish a new connection: [Errno -2] Name or service not known')); 98507)
+[2024-08-05T15:00:15.520+0300] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-08-05T15:00:15.550+0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-05T15:00:15.551+0300] {local_task_job_runner.py:222} INFO - ::endgroup::

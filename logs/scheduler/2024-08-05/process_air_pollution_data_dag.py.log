@@ -723,3 +723,94 @@
 [2024-08-05T14:48:58.748+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:48:58.748+0300] {dag.py:3089} INFO - Sync 1 DAGs
 [2024-08-05T14:48:58.772+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:48:58.772+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
 [2024-08-05T14:48:58.836+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.593 seconds
+[2024-08-05T14:49:57.450+0300] {processor.py:161} INFO - Started process (PID=96344) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:49:57.452+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:49:57.454+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:49:57.453+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:49:57.909+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:49:57.921+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:49:57.921+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:49:57.941+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:49:57.940+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:49:57.969+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.536 seconds
+[2024-08-05T14:50:53.661+0300] {processor.py:161} INFO - Started process (PID=96687) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:50:53.664+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:50:53.665+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:50:53.665+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:50:54.433+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:50:54.445+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:50:54.445+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:50:54.464+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:50:54.464+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:50:54.484+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.833 seconds
+[2024-08-05T14:51:26.211+0300] {processor.py:161} INFO - Started process (PID=96794) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:51:26.213+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:51:26.216+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:51:26.215+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:51:26.656+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:51:26.666+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:51:26.666+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:51:26.685+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:51:26.685+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:51:26.704+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.510 seconds
+[2024-08-05T14:52:24.203+0300] {processor.py:161} INFO - Started process (PID=97023) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:52:24.205+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:52:24.206+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:52:24.205+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:52:24.711+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:52:24.723+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:52:24.723+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:52:24.748+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:52:24.748+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:52:24.773+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.576 seconds
+[2024-08-05T14:53:20.999+0300] {processor.py:161} INFO - Started process (PID=97169) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:53:21.001+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:53:21.004+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:53:21.003+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:53:21.443+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:53:21.453+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:53:21.453+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:53:21.472+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:53:21.471+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:53:21.491+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.509 seconds
+[2024-08-05T14:54:16.284+0300] {processor.py:161} INFO - Started process (PID=97314) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:54:16.286+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:54:16.288+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:54:16.287+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:54:16.701+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:54:16.711+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:54:16.711+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:54:16.729+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:54:16.729+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:54:16.748+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.481 seconds
+[2024-08-05T14:55:13.002+0300] {processor.py:161} INFO - Started process (PID=97506) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:55:13.004+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:55:13.005+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:55:13.004+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:55:13.710+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:55:13.730+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:55:13.730+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:55:13.817+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:55:13.816+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:55:13.907+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.914 seconds
+[2024-08-05T14:56:09.149+0300] {processor.py:161} INFO - Started process (PID=97767) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:56:09.150+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:56:09.151+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:56:09.151+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:56:09.574+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:56:09.586+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:56:09.586+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:56:09.605+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:56:09.604+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:56:09.624+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.487 seconds
+[2024-08-05T14:57:02.912+0300] {processor.py:161} INFO - Started process (PID=97927) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:57:02.914+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:57:02.917+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:57:02.916+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:57:03.374+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:57:03.384+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:57:03.384+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:57:03.403+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:57:03.403+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:57:03.422+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.529 seconds
+[2024-08-05T14:58:00.287+0300] {processor.py:161} INFO - Started process (PID=98095) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:58:00.292+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:58:00.295+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:58:00.294+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:58:00.873+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:58:00.888+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:58:00.888+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:58:00.913+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:58:00.913+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:58:00.942+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.675 seconds
+[2024-08-05T14:58:55.674+0300] {processor.py:161} INFO - Started process (PID=98250) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:58:55.677+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:58:55.679+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:58:55.678+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:58:56.120+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:58:56.131+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:58:56.131+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:58:56.150+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:58:56.149+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:58:56.170+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.512 seconds
+[2024-08-05T14:59:58.719+0300] {processor.py:161} INFO - Started process (PID=98442) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:59:58.722+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T14:59:58.725+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:59:58.724+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:59:59.191+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T14:59:59.204+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:59:59.204+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T14:59:59.223+0300] {logging_mixin.py:188} INFO - [2024-08-05T14:59:59.222+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T14:59:59.242+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.539 seconds
+[2024-08-05T15:00:44.178+0300] {processor.py:161} INFO - Started process (PID=98742) to work on /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T15:00:44.179+0300] {processor.py:830} INFO - Processing file /home/safidy/airflow/dags/process_air_pollution_data_dag.py for tasks to queue
+[2024-08-05T15:00:44.182+0300] {logging_mixin.py:188} INFO - [2024-08-05T15:00:44.180+0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T15:00:44.834+0300] {processor.py:840} INFO - DAG(s) 'process_air_pollution_data_dag' retrieved from /home/safidy/airflow/dags/process_air_pollution_data_dag.py
+[2024-08-05T15:00:44.851+0300] {logging_mixin.py:188} INFO - [2024-08-05T15:00:44.850+0300] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-08-05T15:00:44.879+0300] {logging_mixin.py:188} INFO - [2024-08-05T15:00:44.878+0300] {dag.py:3947} INFO - Setting next_dagrun for process_air_pollution_data_dag to 2024-08-05T00:00:00+00:00, run_after=2024-08-06T00:00:00+00:00
+[2024-08-05T15:00:44.907+0300] {processor.py:183} INFO - Processing /home/safidy/airflow/dags/process_air_pollution_data_dag.py took 0.740 seconds
